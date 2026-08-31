@@ -1,0 +1,396 @@
+/* =====================================================
+   RESPONSIVE ENHANCEMENTS
+   Mobile-first improvements across all sections
+===================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* Smooth section scroll offset for fixed header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* =====================================================
+   HEADER – MOBILE POLISH
+===================================================== */
+
+@media (max-width: 850px) {
+  .main-nav {
+    border-radius: 18px;
+    z-index: 9998;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 4px 0;
+    font-size: 15px;
+  }
+
+  .menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .menu-btn span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    top: 8px;
+  }
+
+  .header-box {
+    width: 92%;
+    height: 62px;
+    padding: 4px 8px 4px 12px;
+    border-radius: 14px;
+  }
+
+  .logo-box {
+    width: 140px;
+    height: 52px;
+  }
+
+  .logo-box img {
+    width: 125px;
+    max-height: 50px;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =====================================================
+   HERO – MOBILE LAYOUT
+===================================================== */
+
+@media (max-width: 900px) {
+  .hero,
+  .slider,
+  .slide-inner {
+    min-height: clamp(680px, 92vh, 820px);
+  }
+
+  .hero-visual {
+    position: absolute;
+    right: -180px;
+    opacity: 0.35;
+    transform: scale(0.85);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .slider,
+  .slide-inner {
+    min-height: auto;
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .slide-inner {
+    width: 92%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 100px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding-top: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(32px, 9vw, 43px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: clamp(13px, 3.5vw, 15px);
+    line-height: 1.75;
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    padding: 8px 14px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-top: 8px;
+  }
+
+  .stat strong {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .slider-controls {
+    bottom: 28px;
+    left: 4%;
+    gap: 12px;
+  }
+
+  .slider-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .slider-progress {
+    width: 92%;
+    left: 4%;
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-content {
+    padding-top: 108px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-stats {
+    gap: 12px 18px;
+  }
+}
+
+/* =====================================================
+   PRODUCTS GRID
+===================================================== */
+
+@media (max-width: 768px) {
+  .vbi-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vbi-product-card {
+    max-width: 100%;
+  }
+
+  .vbi-products-heading {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .vbi-heading-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .vbi-visual {
+    transform: scale(0.85);
+  }
+
+  .vbi-support {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vbi-container {
+    width: 92%;
+  }
+
+  .vbi-heading-left h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .vbi-product-content h3 {
+    font-size: 20px;
+  }
+
+  .vbi-spec-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+@media (max-width: 700px) {
+  .vbi-modal-content {
+    width: 94%;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 18px;
+  }
+
+  .vbi-modal-body {
+    flex-direction: column;
+  }
+
+  .vbi-modal-image,
+  .vbi-modal-info {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   TRUST / WHY / QUALITY SECTIONS
+===================================================== */
+
+@media (max-width: 768px) {
+  .vbi-trust-section,
+  .vbi-why-new,
+  .vbi-quality-section,
+  .vbi-spec-section,
+  .vbi-applications-unique,
+  .vbi-projects-premium,
+  .vbi-delivery-section,
+  .vbi-process-section,
+  .vbi-about-real,
+  .vbi-industries-modern,
+  .vbi-faq-section,
+  .vbi-cta-modern {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .trust-content h2,
+  .vbi-why-heading h2,
+  .vbi-quality-heading h2 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+}
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+@media (max-width: 600px) {
+  .vbi-faq-question {
+    font-size: 15px;
+    padding: 18px 16px;
+    gap: 12px;
+  }
+
+  .vbi-faq-answer {
+    font-size: 14px;
+    padding: 0 16px 18px;
+  }
+}
+
+/* =====================================================
+   CTA SECTION
+===================================================== */
+
+@media (max-width: 600px) {
+  .vbi-cta-modern {
+    min-height: auto;
+    padding: 70px 16px 40px;
+  }
+
+  .vbi-modern-inner h2 {
+    font-size: clamp(34px, 10vw, 54px);
+    letter-spacing: -3px;
+  }
+
+  .vbi-modern-statement {
+    font-size: clamp(16px, 4.5vw, 19px);
+  }
+
+  .vbi-modern-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .vbi-project-strip {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .vbi-project-line {
+    width: 40px;
+    height: 2px;
+  }
+}
+
+/* =====================================================
+   TOUCH & ACCESSIBILITY
+===================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  .primary-btn,
+  .secondary-btn,
+  .quote-btn,
+  .vbi-spec-btn,
+  .vbi-quote-btn,
+  .slider-arrow,
+  .menu-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .main-nav a:hover::after {
+    width: 0;
+  }
+}
+
+/* Prevent horizontal scroll on small devices */
+@media (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  * {
+    min-width: 0;
+  }
+}

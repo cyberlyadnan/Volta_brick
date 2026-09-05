@@ -1,24 +1,62 @@
 /* =====================================================
-   RESPONSIVE ENHANCEMENTS
-   Mobile-first improvements across all sections
+   GLOBAL RESPONSIVE FIXES
+   Proper padding, overflow control, mobile polish
 ===================================================== */
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 body.nav-open {
   overflow: hidden;
 }
 
-/* Smooth section scroll offset for fixed header */
 section[id] {
   scroll-margin-top: 100px;
 }
 
+/* Base container safety */
+.trust-container,
+.vbi-container,
+.vbi-why-wrap,
+.vbi-quality-container,
+.vbi-projects-wrap,
+.vbi-about-real-wrap,
+.vbi-faq-container,
+.footer-container,
+.contact-container,
+.page-container {
+  width: min(1260px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 4vw, 40px);
+  padding-right: clamp(16px, 4vw, 40px);
+  box-sizing: border-box;
+}
+
+/* Prevent overflow from decorative elements */
+.hero,
+.vbi-trust-section,
+.vbi-products-section,
+.vbi-why-new,
+.vbi-quality-section,
+.vbi-spec-section,
+.vbi-applications-unique,
+.vbi-projects-premium,
+.vbi-delivery-section,
+.vbi-process-section,
+.vbi-about-real,
+.vbi-industries-modern,
+.vbi-faq-section,
+.vbi-cta-modern,
+.site-footer {
+  overflow-x: hidden;
+}
+
 /* =====================================================
-   HEADER – MOBILE POLISH
+   HEADER
 ===================================================== */
 
 @media (max-width: 850px) {
@@ -32,7 +70,7 @@ section[id] {
 
   .main-nav a {
     width: 100%;
-    padding: 4px 0;
+    padding: 10px 0;
     font-size: 15px;
   }
 
@@ -59,7 +97,8 @@ section[id] {
   }
 
   .header-box {
-    width: 92%;
+    width: calc(100% - 24px);
+    max-width: none;
     height: 62px;
     padding: 4px 8px 4px 12px;
     border-radius: 14px;
@@ -82,66 +121,83 @@ section[id] {
 }
 
 /* =====================================================
-   HERO – MOBILE LAYOUT
+   HERO – MOBILE
 ===================================================== */
 
 @media (max-width: 900px) {
   .hero,
   .slider,
   .slide-inner {
-    min-height: clamp(680px, 92vh, 820px);
+    min-height: clamp(640px, 90vh, 800px);
   }
 
   .hero-visual {
     position: absolute;
     right: -180px;
-    opacity: 0.35;
-    transform: scale(0.85);
+    opacity: 0.3;
+    transform: scale(0.8);
     pointer-events: none;
+  }
+
+  .slide-inner {
+    width: 100%;
+    max-width: none;
+    padding-left: clamp(16px, 4vw, 32px);
+    padding-right: clamp(16px, 4vw, 32px);
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 600px) {
   .hero,
-  .slider,
+  .slider {
+    min-height: auto;
+  }
+
+  .slide,
   .slide-inner {
     min-height: auto;
     height: auto;
-    min-height: 100svh;
   }
 
   .slide-inner {
-    width: 92%;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-bottom: 100px;
+    padding: 110px 20px 120px;
   }
 
   .hero-content {
     width: 100%;
-    padding-top: 120px;
+    max-width: 100%;
+    padding-top: 0;
   }
 
   .hero-content h1 {
-    font-size: clamp(32px, 9vw, 43px);
-    line-height: 1.05;
-    letter-spacing: -2px;
+    font-size: clamp(28px, 8vw, 40px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+    word-wrap: break-word;
   }
 
   .hero-description {
-    font-size: clamp(13px, 3.5vw, 15px);
-    line-height: 1.75;
-    max-width: 100%;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
   }
 
   .hero-badge {
     font-size: 10px;
     padding: 8px 14px;
+    max-width: 100%;
   }
 
   .hero-actions {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
   }
 
@@ -150,16 +206,22 @@ section[id] {
     width: 100%;
     justify-content: center;
     min-height: 48px;
+    box-sizing: border-box;
   }
 
   .hero-stats {
     flex-wrap: wrap;
-    gap: 16px 24px;
+    gap: 16px 20px;
     margin-top: 8px;
+    width: 100%;
+  }
+
+  .stat {
+    min-width: 0;
   }
 
   .stat strong {
-    font-size: clamp(22px, 6vw, 28px);
+    font-size: clamp(20px, 5.5vw, 26px);
   }
 
   .stat span {
@@ -167,13 +229,19 @@ section[id] {
   }
 
   .hero-visual {
+    display: none !important;
+  }
+
+  .orbit-one,
+  .orbit-two {
     display: none;
   }
 
   .slider-controls {
-    bottom: 28px;
-    left: 4%;
-    gap: 12px;
+    bottom: 32px;
+    left: 20px;
+    right: auto;
+    gap: 10px;
   }
 
   .slider-arrow {
@@ -181,111 +249,29 @@ section[id] {
     height: 44px;
   }
 
+  .slider-counter {
+    display: none;
+  }
+
   .slider-progress {
-    width: 92%;
-    left: 4%;
-    bottom: 18px;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-content {
-    padding-top: 108px;
+    width: calc(100% - 40px);
+    left: 20px;
+    bottom: 16px;
   }
 
-  .hero-content h1 {
-    font-size: 30px;
-  }
-
-  .hero-stats {
-    gap: 12px 18px;
+  .slider-dots {
+    gap: 8px;
   }
 }
 
 /* =====================================================
-   PRODUCTS GRID
+   SECTIONS – MOBILE PADDING & TYPOGRAPHY
+   (Do NOT zero horizontal padding — that caused edge flush)
 ===================================================== */
 
-@media (max-width: 768px) {
-  .vbi-products-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .vbi-product-card {
-    max-width: 100%;
-  }
-
-  .vbi-products-heading {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .vbi-heading-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .vbi-visual {
-    transform: scale(0.85);
-  }
-
-  .vbi-support {
-    flex-direction: column;
-    text-align: center;
-    gap: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .vbi-container {
-    width: 92%;
-  }
-
-  .vbi-heading-left h1 {
-    font-size: clamp(28px, 8vw, 36px);
-  }
-
-  .vbi-product-content h3 {
-    font-size: 20px;
-  }
-
-  .vbi-spec-btn {
-    width: 100%;
-    justify-content: center;
-    min-height: 46px;
-  }
-}
-
-/* =====================================================
-   MODAL
-===================================================== */
-
-@media (max-width: 700px) {
-  .vbi-modal-content {
-    width: 94%;
-    max-height: 92vh;
-    overflow-y: auto;
-    border-radius: 18px;
-  }
-
-  .vbi-modal-body {
-    flex-direction: column;
-  }
-
-  .vbi-modal-image,
-  .vbi-modal-info {
-    width: 100%;
-  }
-}
-
-/* =====================================================
-   TRUST / WHY / QUALITY SECTIONS
-===================================================== */
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .vbi-trust-section,
+  .vbi-products-section,
   .vbi-why-new,
   .vbi-quality-section,
   .vbi-spec-section,
@@ -295,74 +281,519 @@ section[id] {
   .vbi-process-section,
   .vbi-about-real,
   .vbi-industries-modern,
-  .vbi-faq-section,
-  .vbi-cta-modern {
-    padding-left: 0;
-    padding-right: 0;
+  .vbi-faq-section {
+    padding: 70px 24px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
   }
 
+  .vbi-cta-modern {
+    min-height: auto !important;
+    padding: 60px 24px 40px !important;
+  }
+
+  .trust-container,
+  .vbi-container,
+  .vbi-why-wrap,
+  .vbi-quality-container,
+  .vbi-spec-container,
+  .vbi-app-inner,
+  .vbi-projects-wrap,
+  .vbi-delivery-container,
+  .vbi-process-container,
+  .vbi-about-real-wrap,
+  .vbi-industries-inner,
+  .vbi-faq-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .vbi-trust-section,
+  .vbi-products-section,
+  .vbi-why-new,
+  .vbi-quality-section,
+  .vbi-spec-section,
+  .vbi-applications-unique,
+  .vbi-projects-premium,
+  .vbi-delivery-section,
+  .vbi-process-section,
+  .vbi-about-real,
+  .vbi-industries-modern,
+  .vbi-faq-section {
+    padding: 60px 20px !important;
+  }
+
+  /* Headings – prevent overflow */
   .trust-content h2,
-  .vbi-why-heading h2,
-  .vbi-quality-heading h2 {
-    font-size: clamp(28px, 7vw, 40px);
-  }
-}
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-@media (max-width: 600px) {
-  .vbi-faq-question {
-    font-size: 15px;
-    padding: 18px 16px;
-    gap: 12px;
-  }
-
-  .vbi-faq-answer {
-    font-size: 14px;
-    padding: 0 16px 18px;
-  }
-}
-
-/* =====================================================
-   CTA SECTION
-===================================================== */
-
-@media (max-width: 600px) {
-  .vbi-cta-modern {
-    min-height: auto;
-    padding: 70px 16px 40px;
-  }
-
+  .vbi-heading-left h1,
+  .vbi-why-intro h2,
+  .vbi-quality-left h2,
+  .vbi-spec-heading h2,
+  .vbi-app-header h2,
+  .vbi-projects-head h2,
+  .vbi-head-grid h2,
+  .vbi-delivery-title h2,
+  .vbi-process-heading-wrap h2,
+  .vbi-real-content h2,
+  .vbi-ind-title h2,
+  .vbi-faq-intro h2,
   .vbi-modern-inner h2 {
-    font-size: clamp(34px, 10vw, 54px);
-    letter-spacing: -3px;
+    font-size: clamp(28px, 8vw, 36px) !important;
+    letter-spacing: -1.2px !important;
+    line-height: 1.12 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 
-  .vbi-modern-statement {
-    font-size: clamp(16px, 4.5vw, 19px);
+  .trust-content p,
+  .vbi-product-content p,
+  .vbi-why-intro p,
+  .vbi-quality-left p,
+  .vbi-spec-intro p,
+  .vbi-app-header p,
+  .vbi-delivery-intro p,
+  .vbi-process-heading-wrap p,
+  .vbi-real-content p,
+  .vbi-ind-intro p,
+  .vbi-faq-intro > p,
+  .vbi-modern-description,
+  .vbi-head-grid p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
   }
 
-  .vbi-modern-description {
-    font-size: 15px;
-    line-height: 1.7;
+  /* Grids → single column */
+  .trust-top,
+  .vbi-products-heading,
+  .vbi-products-grid,
+  .vbi-why-wrap,
+  .vbi-quality-container,
+  .vbi-project-grid,
+  .vbi-about-real-wrap,
+  .vbi-faq-container,
+  .trust-cards,
+  .vbi-support,
+  .vbi-delivery-main,
+  .vbi-delivery-header,
+  .vbi-process-heading-wrap,
+  .vbi-ind-top,
+  .vbi-spec-top,
+  .vbi-head-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .vbi-products-grid {
+    display: grid !important;
+    gap: 20px !important;
+  }
+
+  .vbi-product-card {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .vbi-heading-right,
+  .trust-visual {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .vbi-visual,
+  .trust-visual {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .vbi-support {
+    text-align: center;
+    gap: 20px;
+    padding: 28px 20px !important;
+  }
+
+  .vbi-spec-btn,
+  .vbi-quote-btn,
+  .trust-btn,
+  .vbi-why-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    box-sizing: border-box;
+  }
+
+  .vbi-modern-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-modern-primary,
+  .vbi-modern-secondary {
+    width: 100% !important;
+    justify-content: space-between;
   }
 
   .vbi-project-strip {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
-    align-items: center;
   }
 
-  .vbi-project-line {
-    width: 40px;
-    height: 2px;
+  .vbi-faq-question {
+    padding: 16px !important;
+    font-size: 14px !important;
+    gap: 10px;
+  }
+
+  .vbi-faq-answer {
+    padding: 0 16px 16px !important;
+    font-size: 13px !important;
+  }
+
+  /* ---- Quality section ---- */
+  .vbi-quality-mini-stats {
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-quality-mini-stats div {
+    flex: 1 1 30% !important;
+    min-width: 0 !important;
+    padding: 14px 8px !important;
+  }
+
+  .vbi-quality-mini-stats strong {
+    font-size: 16px !important;
+  }
+
+  .vbi-quality-mini-stats span {
+    font-size: 9px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .vbi-quality-card {
+    grid-template-columns: 32px 48px 1fr !important;
+    gap: 12px !important;
+    padding: 16px 14px !important;
+    min-height: auto !important;
+  }
+
+  .vbi-quality-card .vbi-card-arrow {
+    display: none !important;
+  }
+
+  .vbi-quality-orbit {
+    transform: scale(0.85);
+    margin: 0 auto 10px;
+  }
+
+  /* ---- Spec / Technical Data ---- */
+  .vbi-spec-table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-spec-table-head,
+  .vbi-spec-row {
+    min-width: 520px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .vbi-spec-bottom {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+
+  .vbi-spec-button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* ---- Applications cards ---- */
+  .vbi-application-map {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-center {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: min(240px, 70vw) !important;
+    height: min(240px, 70vw) !important;
+    margin: 0 auto 24px !important;
+  }
+
+  .connection {
+    display: none !important;
+  }
+
+  .vbi-app-node,
+  .node-1,
+  .node-2,
+  .node-3,
+  .node-4,
+  .node-5 {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vbi-app-bottom {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+
+  /* ---- Delivery ---- */
+  .vbi-delivery-visual {
+    height: auto !important;
+    min-height: 280px !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-delivery-steps {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .vbi-delivery-step {
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vbi-delivery-strip,
+  .vbi-delivery-badges {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .vbi-truck {
+    transform: translate(-50%, -50%) scale(0.55) !important;
+  }
+
+  /* ---- Process ---- */
+  .vbi-process {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .vbi-process-card,
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    margin-top: 0 !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 22px 18px !important;
+  }
+
+  .vbi-process-line,
+  .vbi-process-dot {
+    display: none !important;
+  }
+
+  .vbi-process-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  /* ---- Industries ---- */
+  .vbi-industry-item {
+    grid-template-columns: 36px 1fr 40px !important;
+    gap: 12px !important;
+    padding: 18px 4px !important;
+    min-height: auto !important;
+  }
+
+  .vbi-item-shape {
+    display: none !important;
+  }
+
+  .vbi-ind-intro {
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .vbi-trust-section,
+  .vbi-products-section,
+  .vbi-why-new,
+  .vbi-quality-section,
+  .vbi-spec-section,
+  .vbi-applications-unique,
+  .vbi-projects-premium,
+  .vbi-delivery-section,
+  .vbi-process-section,
+  .vbi-about-real,
+  .vbi-industries-modern,
+  .vbi-faq-section {
+    padding: 56px 16px !important;
+  }
+
+  .vbi-cta-modern {
+    padding: 50px 16px 36px !important;
+  }
+
+  .slide-inner {
+    padding: 100px 16px 110px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important;
+  }
+
+  .vbi-quality-left h2,
+  .vbi-spec-heading h2,
+  .vbi-app-header h2,
+  .vbi-delivery-title h2,
+  .vbi-process-heading-wrap h2,
+  .vbi-ind-title h2,
+  .vbi-head-grid h2,
+  .vbi-modern-inner h2 {
+    font-size: 26px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .vbi-quality-mini-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+
+  .vbi-quality-mini-stats div {
+    border-right: 1px solid rgba(15, 85, 144, 0.12) !important;
+    padding: 12px 6px !important;
+  }
+
+  .vbi-quality-mini-stats div:last-child {
+    border-right: none !important;
+  }
+
+  .vbi-quality-card {
+    grid-template-columns: 28px 42px 1fr !important;
+    gap: 10px !important;
+    padding: 14px 12px !important;
+  }
+
+  .vbi-card-content h3 {
+    font-size: 15px !important;
+  }
+
+  .vbi-card-content p {
+    font-size: 12px !important;
+  }
+
+  .vbi-product-content {
+    padding: 22px 18px !important;
+  }
+
+  .vbi-product-content h2 {
+    font-size: 22px !important;
+  }
+
+  .trust-visual {
+    transform: scale(0.7);
+    height: auto !important;
+    margin-top: -10px;
+  }
+
+  .trust-card {
+    padding: 20px !important;
+    min-height: auto !important;
+  }
+
+  .vbi-feature-box {
+    padding: 22px !important;
+  }
+
+  .vbi-real-image {
+    min-height: 280px;
+  }
+
+  .vbi-construction-art {
+    min-height: 280px !important;
+    height: auto !important;
+  }
+
+  .vbi-industry-item {
+    padding: 16px 0 !important;
+  }
+
+  .vbi-item-main h3 {
+    font-size: 16px !important;
+  }
+
+  .vbi-item-main p {
+    font-size: 13px !important;
+  }
+
+  .header-box {
+    width: calc(100% - 24px) !important;
   }
 }
 
 /* =====================================================
-   TOUCH & ACCESSIBILITY
+   MODAL
+===================================================== */
+
+@media (max-width: 700px) {
+  .vbi-modal-content {
+    width: 94% !important;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .vbi-modal-body {
+    flex-direction: column !important;
+  }
+
+  .vbi-modal-image,
+  .vbi-modal-info {
+    width: 100% !important;
+  }
+}
+
+/* =====================================================
+   TOUCH TARGETS
 ===================================================== */
 
 @media (hover: none) and (pointer: coarse) {
@@ -372,26 +803,10 @@ section[id] {
   .vbi-spec-btn,
   .vbi-quote-btn,
   .slider-arrow,
-  .menu-btn {
+  .menu-btn,
+  .footer-cta,
+  .contact-submit {
     min-height: 44px;
-    min-width: 44px;
-  }
-
-  .main-nav a:hover::after {
-    width: 0;
-  }
-}
-
-/* Prevent horizontal scroll on small devices */
-@media (max-width: 480px) {
-  html,
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-  }
-
-  * {
-    min-width: 0;
   }
 }
 
@@ -432,10 +847,7 @@ section[id] {
 .footer-container {
   position: relative;
   z-index: 1;
-  width: 92%;
-  max-width: 1260px;
-  margin: 0 auto;
-  padding: 70px 0 0;
+  padding-top: 70px;
 }
 
 .footer-top {
@@ -639,7 +1051,6 @@ section[id] {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Footer – Tablet */
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -652,7 +1063,6 @@ section[id] {
   }
 }
 
-/* Footer – Mobile */
 @media (max-width: 600px) {
   .footer-container {
     padding-top: 50px;
@@ -664,27 +1074,9 @@ section[id] {
     padding-bottom: 36px;
   }
 
-  .footer-brand p {
-    font-size: 13px;
-  }
-
-  .footer-col h4 {
-    font-size: 12px;
-    margin-bottom: 16px;
-  }
-
-  .footer-col ul li a {
-    font-size: 13px;
-  }
-
-  .footer-contact-list li {
-    font-size: 13px;
-  }
-
   .footer-cta {
     width: 100%;
     justify-content: space-between;
-    margin-top: 18px;
   }
 
   .footer-bottom {
@@ -692,13 +1084,5 @@ section[id] {
     align-items: center;
     text-align: center;
     padding: 20px 0 28px;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-  }
-
-  .footer-bottom-links a {
-    font-size: 12px;
   }
 }

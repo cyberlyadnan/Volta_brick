@@ -709,4 +709,80 @@
   .feature-card {
     padding: 22px 18px;
   }
+
+  .page-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
+
+/* ---------- Additional Quality Page Helpers ---------- */
+.page-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.feature-grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .feature-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid.grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quality-bottom-line {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: #f0f6fa;
+  border-left: 4px solid #ff6b35;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #073d60;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quality-bottom-line::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #ff6b35;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.vbi-faq-section.inner-faq {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #f7fafb;
+}
+
+.vbi-faq-section.inner-faq .vbi-faq-container {
+  width: min(1260px, 100%);
+  padding: 0 clamp(16px, 4vw, 40px);
+  gap: clamp(32px, 5vw, 70px);
+}
+
+.vbi-faq-section.inner-faq .vbi-faq-intro h2 {
+  font-size: clamp(30px, 3.8vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+

@@ -816,7 +816,7 @@ section[id] {
 
 .site-footer {
   position: relative;
-  background: linear-gradient(165deg, #042d4c 0%, #06395f 45%, #0a4a72 100%);
+  background: linear-gradient(165deg, #070b14 0%, #0f172a 45%, #1e293b 100%);
   color: #fff;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
@@ -840,7 +840,7 @@ section[id] {
   right: -150px;
   bottom: -200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -913,7 +913,7 @@ section[id] {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #ff6b35;
+  color: #f59e0b;
   margin-bottom: 22px;
   position: relative;
   padding-bottom: 12px;
@@ -926,7 +926,7 @@ section[id] {
   bottom: 0;
   width: 28px;
   height: 2px;
-  background: #ff6b35;
+  background: #f59e0b;
   border-radius: 2px;
 }
 
@@ -975,7 +975,7 @@ section[id] {
 }
 
 .footer-contact-list a:hover {
-  color: #ff6b35;
+  color: #f59e0b;
 }
 
 .footer-cta {
@@ -984,12 +984,12 @@ section[id] {
   gap: 12px;
   margin-top: 24px;
   padding: 12px 20px 12px 22px;
-  background: linear-gradient(135deg, #ff7c4d, #ff5d2c);
-  color: #fff;
+  background: linear-gradient(135deg, #ffc837, #f59e0b);
+  color: #0f172a;
   font-size: 13px;
   font-weight: 800;
   border-radius: 10px;
-  box-shadow: 0 5px 0 #c94a24, 0 10px 25px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 5px 0 #b45309, 0 10px 25px rgba(245, 158, 11, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1000,13 +1000,14 @@ section[id] {
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
   font-size: 15px;
 }
 
 .footer-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 7px 0 #c94a24, 0 14px 30px rgba(255, 107, 53, 0.28);
+  box-shadow: 0 7px 0 #b45309, 0 14px 30px rgba(245, 158, 11, 0.35);
 }
 
 .footer-bottom {
@@ -1041,7 +1042,7 @@ section[id] {
 }
 
 .footer-bottom-links a:hover {
-  color: #ff6b35;
+  color: #f59e0b;
 }
 
 .footer-divider {

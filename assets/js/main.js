@@ -123,7 +123,7 @@
   const vbiProducts = {
     hollow: {
       title: 'Hollow Blocks',
-      description: 'Lightweight and practical concrete blocks designed for a wide range of walling and partition applications.',
+      description: 'Lightweight. Practical. Versatile. Our hollow concrete blocks are suitable for a wide range of walling and partition applications, offering a practical combination of strength, reduced weight and construction efficiency.',
       image: 'assets/images/products/hollow-block.png',
       type: 'Hollow Concrete Block',
       size: 'Confirm with VBI',
@@ -131,7 +131,7 @@
     },
     solid: {
       title: 'Solid Blocks',
-      description: 'Robust concrete blocks suitable for applications where durability and structural performance are important.',
+      description: 'Strength for Demanding Applications. Solid concrete blocks provide a robust option for applications where durability, stability and dependable performance are important.',
       image: 'assets/images/products/solid-block.png',
       type: 'Solid Concrete Block',
       size: 'Confirm with VBI',
@@ -154,12 +154,12 @@
       application: 'Ribbed Slab Construction',
     },
     paving: {
-      title: 'Paving Blocks / Interlocks',
-      description: 'Durable paving solutions for outdoor areas, walkways, landscaping and other suitable applications.',
+      title: 'Interlock Blocks',
+      description: 'Durable Solutions for Modern Outdoor Spaces. High-quality interlock blocks designed for driveways, walkways, parking areas, landscaping and outdoor site development. Our interlocking blocks offer a practical, durable and attractive paving solution for residential, commercial and infrastructure applications.',
       image: 'assets/images/products/paving-block.png',
-      type: 'Concrete Paving Block',
+      type: 'Concrete Interlocking Block',
       size: 'Confirm with VBI',
-      application: 'Paving & Landscaping',
+      application: 'Driveways, Walkways, Parking & Landscaping',
     },
     kerbstone: {
       title: 'Kerbstones',

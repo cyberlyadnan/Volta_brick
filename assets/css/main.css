@@ -8730,6 +8730,7 @@ Supporting Construction
 }
 
 
+.vbi-project-items .vbi-project-item,
 .vbi-project-item{
   position:relative;
 
@@ -13317,12 +13318,12 @@ Supporting Construction
    PROJECT STRIP
 ========================================= */
 
-.vbi-project-strip{
-  max-width:720px;
+.vbi-cta-modern .vbi-project-strip{
+  max-width:760px;
 
   margin:70px auto 0;
 
-  padding-top:22px;
+  padding-top:24px;
 
   display:flex;
 
@@ -13330,7 +13331,7 @@ Supporting Construction
 
   justify-content:center;
 
-  gap:22px;
+  gap:18px;
 
   border-top:
     1px solid
@@ -13338,45 +13339,90 @@ Supporting Construction
 }
 
 
-.vbi-project-item{
-  display:flex;
+.vbi-cta-modern .vbi-project-item{
+  display:inline-flex;
 
   align-items:center;
 
-  gap:10px;
+  gap:14px;
 
   text-align:left;
+
+  background:#ffffff;
+
+  border:1px solid #e0e8eb;
+
+  border-radius:14px;
+
+  padding:14px 22px;
+
+  min-height:auto;
+
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+
+  transition:all .35s ease;
+
+  position:relative;
+
+  overflow:hidden;
 }
 
 
+.vbi-cta-modern .vbi-project-item::before{
+  display:none;
+}
+
+
+.vbi-cta-modern .vbi-project-item:hover{
+  transform:translateY(-3px);
+
+  border-color:#f59e0b;
+
+  box-shadow:0 14px 30px rgba(0,0,0,0.22);
+}
+
+
+.vbi-cta-modern .vbi-project-item small,
 .vbi-project-item small{
   color:#d97706;
 
-  font-size:13px;
+  font-size:16px;
 
   font-weight:950;
+
+  line-height:1;
+
+  display:inline-block;
 }
 
 
+.vbi-cta-modern .vbi-project-item span,
 .vbi-project-item span{
-  color:rgba(255,255,255,.38);
+  color:#0f172a;
 
-  font-size:7px;
+  font-size:11px;
 
-  font-weight:900;
+  font-weight:800;
 
-  line-height:1.5;
+  line-height:1.35;
 
-  letter-spacing:1.5px;
+  letter-spacing:0.8px;
+
+  text-transform:uppercase;
+
+  display:inline-block;
 }
 
 
+.vbi-cta-modern .vbi-project-line,
 .vbi-project-line{
-  width:45px;
+  width:40px;
   height:1px;
 
   background:
     rgba(255,255,255,.16);
+
+  flex-shrink:0;
 }
 
 
@@ -13514,13 +13560,23 @@ Supporting Construction
   }
 
 
+  .vbi-cta-modern .vbi-project-strip,
   .vbi-project-strip{
-    justify-content:flex-start;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
   }
 
 
+  .vbi-cta-modern .vbi-project-item{
+    padding:10px 16px;
+  }
+
+
+  .vbi-cta-modern .vbi-project-item span,
   .vbi-project-item span{
-    font-size:6px;
+    font-size:10px;
+    color:#0f172a;
   }
 
 

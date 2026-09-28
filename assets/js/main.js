@@ -198,6 +198,8 @@
 
     document.querySelectorAll('[data-close-modal]').forEach((el) => {
       el.addEventListener('click', (e) => {
+        const href = el.getAttribute('href');
+        if (href && href !== '#') return;
         e.preventDefault();
         closeSpec();
       });

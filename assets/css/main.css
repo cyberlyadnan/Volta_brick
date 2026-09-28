@@ -2020,8 +2020,8 @@ a {
     background:
 
         linear-gradient(145deg,
-            #ff8053,
-            #e84c1e);
+            #1a78b8,
+            #0f5590);
 
     z-index: 5;
 
@@ -6545,9 +6545,9 @@ color: white;
     border-radius: 7px;
 
     background:
-        rgba(245,158,11,.12);
+        rgba(255,255,255,.12);
 
-    color: #fde68a;
+    color: #ffffff;
 
     font-size: 12px;
 
@@ -6841,7 +6841,7 @@ color: white;
 
     max-width:800px;
 
-    margin:0 auto 70px;
+    margin:0 auto 0px;
 }
 
 
@@ -7626,7 +7626,7 @@ Supporting Construction
   position:relative;
   overflow:hidden;
 
-  padding:125px 5%;
+  padding:72px 5%;
 
   background:#fff;
 
@@ -7692,7 +7692,7 @@ Supporting Construction
 
   gap:12px;
 
-  margin-bottom:24px;
+  margin-bottom:14px;
 
   color:#f59e0b;
 
@@ -7716,13 +7716,19 @@ Supporting Construction
   display:grid;
 
   grid-template-columns:
-    1.15fr .85fr;
+    1.05fr .95fr;
 
-  gap:90px;
+  gap:36px;
 
-  align-items:end;
+  align-items:center;
 
-  margin-bottom:65px;
+  margin-bottom:36px;
+}
+
+.vbi-head-copy{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
 
@@ -7772,7 +7778,7 @@ Supporting Construction
   grid-template-columns:
     1fr 1fr;
 
-  gap:80px;
+  gap:40px;
 
   align-items:center;
 }
@@ -8383,8 +8389,8 @@ Supporting Construction
   background:
     linear-gradient(
       145deg,
-      #ff8158,
-      #e95529
+      #1a78b8,
+      #0f5590
     );
 
   border-radius:3px;
@@ -8404,8 +8410,8 @@ Supporting Construction
   background:
     linear-gradient(
       145deg,
-      #7d3321,
-      #542316
+      #06395f,
+      #042d4c
     );
 
   box-shadow:
@@ -8425,7 +8431,7 @@ Supporting Construction
   transform:
     skewX(-38deg);
 
-  background:#ff9a78;
+  background:#4aa3d4;
 }
 
 
@@ -8442,7 +8448,7 @@ Supporting Construction
   transform:
     skewY(-52deg);
 
-  background:#c94320;
+  background:#0a4a78;
 }
 
 
@@ -8668,7 +8674,7 @@ Supporting Construction
 
 .vbi-construction-art:hover
 .vbi-art-round{
-  background:#f59e0b;
+  background:#0f5590;
 
   transform:
     rotate(45deg);

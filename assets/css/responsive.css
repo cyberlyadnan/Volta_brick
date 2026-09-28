@@ -1087,3 +1087,233 @@ section[id] {
     padding: 20px 0 28px;
   }
 }
+
+/* =====================================================
+   STANDARD HEADING SCALE
+===================================================== */
+
+.hero-content h1,
+.page-hero h1 {
+  font-size: clamp(32px, 4vw, 48px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -1.2px !important;
+}
+
+.vbi-heading-left h1,
+.trust-content h2,
+.vbi-why-intro h2,
+.vbi-quality-left h2,
+.vbi-spec-heading h2,
+.vbi-app-header h2,
+.vbi-projects-head h2,
+.vbi-head-grid h2,
+.vbi-delivery-title h2,
+.vbi-process-heading-wrap h2,
+.vbi-real-content h2,
+.vbi-ind-title h2,
+.vbi-faq-intro h2,
+.page-section h2 {
+  font-size: clamp(28px, 3.4vw, 42px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -1px !important;
+}
+
+.vbi-modern-inner h2 {
+  font-size: clamp(32px, 4.2vw, 52px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.4px !important;
+  margin-top: 18px !important;
+}
+
+.vbi-modern-statement {
+  font-size: clamp(16px, 2vw, 20px) !important;
+  margin-top: 18px !important;
+  padding: 10px 18px !important;
+}
+
+.vbi-cta-modern {
+  min-height: 0 !important;
+  padding: 72px 24px 56px !important;
+}
+
+.vbi-bg-text {
+  font-size: clamp(140px, 22vw, 280px) !important;
+  letter-spacing: -8px !important;
+}
+
+/* =====================================================
+   FLOATING BADGES – keep them inside, not clipped
+===================================================== */
+
+.vbi-products-heading,
+.vbi-heading-right {
+  overflow: visible !important;
+}
+
+.vbi-visual {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 260px;
+  width: 100%;
+  padding: 28px 90px 36px;
+  box-sizing: border-box;
+}
+
+.vbi-main-image {
+  width: min(260px, 72%) !important;
+  height: auto !important;
+  max-height: 220px;
+}
+
+.vbi-floating-card.vbi-quality-card,
+.vbi-floating-card.vbi-uae-card {
+  display: flex !important;
+  grid-template-columns: none !important;
+  position: absolute !important;
+  width: max-content !important;
+  max-width: 160px;
+  min-height: 0 !important;
+  padding: 8px 12px !important;
+  gap: 8px !important;
+  z-index: 12 !important;
+}
+
+.vbi-floating-card.vbi-quality-card {
+  left: 0 !important;
+  right: auto !important;
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+.vbi-floating-card.vbi-uae-card {
+  right: 0 !important;
+  left: auto !important;
+  top: 0 !important;
+  bottom: auto !important;
+}
+
+/* =====================================================
+   BUTTON TEXT – white on dark buttons
+===================================================== */
+
+.vbi-explore-btn,
+.vbi-explore-btn:hover,
+.vbi-quote-btn,
+.vbi-quote-btn:hover {
+  color: #ffffff !important;
+}
+
+.vbi-explore-btn span,
+.vbi-quote-btn span {
+  color: #ffffff !important;
+}
+
+/* =====================================================
+   PRODUCT IMAGE – theme blue, not orange
+===================================================== */
+
+.vbi-product-image.orange,
+.product-tile-img.orange {
+  background: linear-gradient(145deg, #e7f1f8, #d5e6f2) !important;
+}
+
+/* =====================================================
+   QUALITY CARD HOVER – icon stays readable
+===================================================== */
+
+.vbi-quality-section .vbi-quality-card:hover .vbi-card-icon {
+  background: #0f5590 !important;
+  color: #ffffff !important;
+}
+
+.vbi-quality-section .vbi-quality-card:hover .vbi-card-icon svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.vbi-quality-section .vbi-quality-card:hover .vbi-card-number {
+  color: #0f5590 !important;
+}
+
+.vbi-quality-section .vbi-quality-card::before {
+  background: #0f5590 !important;
+}
+
+/* =====================================================
+   PRODUCT MODAL
+===================================================== */
+
+.vbi-modal-image {
+  padding: 36px 28px !important;
+  box-sizing: border-box;
+}
+
+.vbi-modal-image img {
+  width: auto !important;
+  max-width: 72% !important;
+  height: auto !important;
+  max-height: 260px !important;
+  margin: auto;
+}
+
+.vbi-modal .vbi-spec-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1.4fr !important;
+  min-height: 0 !important;
+  align-items: start !important;
+  gap: 12px !important;
+  padding: 14px 4px !important;
+  background: transparent !important;
+  transform: none !important;
+}
+
+.vbi-modal .vbi-spec-row::before {
+  display: none !important;
+}
+
+.vbi-modal .vbi-spec-row:hover {
+  background: #f3f8fb !important;
+  transform: none !important;
+}
+
+.vbi-modal .vbi-spec-row span,
+.vbi-modal .vbi-spec-row strong {
+  position: relative;
+  z-index: 2;
+  color: #073d60 !important;
+  background: transparent !important;
+}
+
+.vbi-modal .vbi-spec-row span {
+  color: #0f5590 !important;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .vbi-visual {
+    padding: 16px 8px 20px;
+    min-height: 220px;
+  }
+
+  .vbi-floating-card.vbi-quality-card,
+  .vbi-floating-card.vbi-uae-card {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 8px auto 0;
+    max-width: 100%;
+  }
+
+  .vbi-visual {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .vbi-main-image {
+    flex: 0 0 100%;
+  }
+}

@@ -538,6 +538,8 @@ a {
     align-items: center;
 
     position: relative;
+    padding-bottom: 90px;
+    box-sizing: border-box;
 }
 
 
@@ -760,7 +762,8 @@ a {
 
     gap: 40px;
 
-    margin-top: 42px;
+    margin-top: 36px;
+    margin-bottom: 15px;
 }
 
 
@@ -1225,15 +1228,15 @@ a {
 
     position: absolute;
 
-    left: 4%;
+    left: max(4%, calc((100% - 1260px) / 2));
 
-    bottom: 28px;
+    bottom: 24px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 12px;
 
     z-index: 100;
 }
@@ -1964,10 +1967,13 @@ a {
         rotate(-7deg);
 
     background:
+        linear-gradient(135deg,
+            #1d4ed8 0%,
+            #0f172a 100%);
 
-        linear-gradient(145deg,
-            #176aa7,
-            #073f70);
+    box-shadow:
+        12px 18px 25px rgba(15, 23, 42, .4),
+        inset 2px 2px 5px rgba(255, 255, 255, .25);
 
     z-index: 4;
 
@@ -1987,10 +1993,10 @@ a {
 
     border-radius: 4px;
 
-    background: #062d4d;
+    background: #090d16;
 
     box-shadow:
-        inset 3px 3px 6px rgba(0, 0, 0, .6);
+        inset 3px 3px 6px rgba(0, 0, 0, .7);
 }
 
 
@@ -2004,9 +2010,10 @@ a {
 }
 
 
-/* Orange */
+/* Yellow / Theme Accent Brick */
 
-.orange-block {
+.orange-block,
+.yellow-block {
 
     width: 155px;
     height: 75px;
@@ -2018,10 +2025,14 @@ a {
         rotate(7deg);
 
     background:
+        linear-gradient(135deg,
+            #ffc837 0%,
+            #f59e0b 50%,
+            #d97706 100%);
 
-        linear-gradient(145deg,
-            #1a78b8,
-            #0f5590);
+    box-shadow:
+        12px 18px 25px rgba(245, 158, 11, .38),
+        inset 2px 2px 5px rgba(255, 255, 255, .4);
 
     z-index: 5;
 

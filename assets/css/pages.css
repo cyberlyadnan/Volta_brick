@@ -58,6 +58,32 @@
   padding: 0 clamp(16px, 4vw, 40px);
 }
 
+.page-hero-split,
+.contact-hero-inner.page-hero-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+
+.page-hero-visual {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+}
+
+.page-hero-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
 .page-hero-badge {
   display: inline-flex;
   align-items: center;
@@ -187,7 +213,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(28px, 5vw, 56px);
-  align-items: center;
+  align-items: stretch;
 }
 
 .page-split.reverse {
@@ -203,12 +229,15 @@
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+  min-height: 100%;
+  height: 100%;
 }
 
 .page-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 340px;
   object-fit: cover;
 }
 
@@ -328,22 +357,22 @@
 
 .product-tile-img {
   position: relative;
-  height: 200px;
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 220px;
+  background: #0f172a;
   overflow: hidden;
 }
 
 .product-tile-img.orange {
-  background: linear-gradient(145deg, #d97706, #f59e0b);
+  background: #0f172a;
 }
 
 .product-tile-img img {
-  max-width: 70%;
-  max-height: 140px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  display: block;
 }
 
 .product-tile-img .tag {
@@ -654,10 +683,30 @@
     padding: 130px 0 60px;
   }
 
+  .page-hero-split,
+  .contact-hero-inner.page-hero-split {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero-visual {
+    order: -1;
+    min-height: 220px;
+  }
+
+  .page-hero-visual img {
+    min-height: 220px;
+    max-height: 280px;
+  }
+
   .page-split,
   .page-split.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
+  }
+
+  .page-media {
+    height: 300px;
+    min-height: 300px;
   }
 
   .feature-grid,
@@ -691,8 +740,13 @@
     grid-template-columns: 1fr;
   }
 
-  .page-media img {
+  .page-media {
+    height: 240px;
     min-height: 240px;
+  }
+
+  .page-media img {
+    min-height: 0;
   }
 
   .page-cta-actions {

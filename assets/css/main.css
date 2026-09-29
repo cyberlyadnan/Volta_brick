@@ -6540,7 +6540,8 @@ color: white;
    TYPE
 ========================================= */
 
-.spec-type {
+.spec-type,
+.spec-type.spec-custom {
 
     display: inline-flex;
 
@@ -6555,12 +6556,15 @@ color: white;
 
     border-radius: 7px;
 
-    background:
-        rgba(255,255,255,.12);
+    background: rgba(255, 255, 255, 0.16);
 
-    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
 
-    font-size: 12px;
+    color: #ffffff !important;
+
+    -webkit-text-fill-color: #ffffff;
+
+    font-size: 13px;
 
     font-weight: 800;
 
